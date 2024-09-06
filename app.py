@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
-
+import numpy
 
 app = Flask(__name__)
 model = pickle.load(open("catboost_model-2.pkl", "rb"))
@@ -47,4 +47,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5001, debug=True)
