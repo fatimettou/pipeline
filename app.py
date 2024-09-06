@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
-import numpy
-
 app = Flask(__name__)
 model = pickle.load(open("catboost_model-2.pkl", "rb"))
 
